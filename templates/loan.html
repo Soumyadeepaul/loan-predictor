@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Prediction</title>
+    <style>
+        #formbody{
+            max-width:510px;
+            margin:auto;
+            padding:20px;
+            background-color:pink;
+        #form{
+            display:table-cell;
+            text-align:left;
+            vertical-align: middle;
+        }
+        #firstname{
+            color:red;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="formbody">
+        <form id="form" action="{{ url_for('form_detail')}}" method="post">
+            <div>
+            <label for="firstname">First name</label>
+            <input type="text" id='firstname' name="fname" placeholder="Name" required>
+            <label for='lastname'>Last name</label>
+            <input type="text" id='lastname' name="lname" placeholder="Surname" required>
+            </div>
+            <div>
+            <label for='gender'>Gender</label>
+            <select name="gender" id="gender">
+                <option value=0>Male</option>
+                <option value=1>Female</option>
+            </select>
+            </div>
+            <div>
+            <label for='married'>Married</label>
+            <select name="married" id="married">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            </div>
+            <div>
+            <label for='dependents'>Dependents</label>
+            <select name="dependents" id="dependents">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3+</option>
+            </select>
+            </div>
+            <div>
+            <label for='education'>Education</label>
+            <select name="education" id="education">
+                <option value=0>Not Graduate</option>
+                <option value=1>Graduate</option>
+            </select>
+            </div>
+            <div>
+            <label for='self employed'>Self Employed</label>
+            <select name="self employed" id="self employed">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            </div>
+            <div>
+            <label for='property area'>Property Area</label>
+            <select name="property area" id="property area">
+                <option value=2>Urban</option>
+                <option value=1>SemiUrban</option>
+                <option value=0>Rural</option>
+            </select>
+            </div>
+            <div>
+            <label for='applicant income'>Applicant Income</label>
+            <input type="text" id='applicant income'name="applicant income" placeholder="Amount" required>
+            </div>
+            <div>
+            <label for='coapplicant income'>CoApplicant Income</label>
+            <input type="text" id='coapplicant income' name="coapplicant income" placeholder="Amount" required>
+            </div>
+            <div>
+            <label for='loan amount'>Loan Amount</label>
+            <input type="text" id='loan amount' name="loan amount" placeholder="Amount" required>
+            </div>
+            <div>
+            <label for='loan amount term'>Loan Amount Term</label>
+            <input type="text" id='loan amount term' name="loan amount term" placeholder="month" required>
+            </div>
+            <div>
+            <label for='credit history'>Credit History</label>
+            <select name="credit history" id="credit history">
+                <option value=0>0</option>
+                <option value=1>1</option>
+            </select>
+            </div>
 
+        </form>
+        <button type="submit" form="form" name="submit" value="Submit">Submit</button>
+    </div>
+
+</body>
+</html>
