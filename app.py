@@ -8,8 +8,8 @@ app=Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 model=pickle.load(open('model.pkl','rb'))
-@app.route('/'):
+@app.route('/')
 def hi():
     return "HI"
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run()
