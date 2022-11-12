@@ -10,6 +10,6 @@ app.logger.setLevel(logging.ERROR)
 model=pickle.load(open('model.pkl','rb'))
 @app.route('/')
 def hi():
-    return "HI"
+    return render_template('loan.html')
 if __name__=='__main__':
     app.run()
