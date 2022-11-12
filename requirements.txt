@@ -3,6 +3,5 @@ Flask
 gspread
 gunicorn
 flask
-pickle
 sklearn
 scikit-learn
